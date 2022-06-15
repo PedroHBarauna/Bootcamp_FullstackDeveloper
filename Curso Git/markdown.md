@@ -6,4 +6,4 @@ _italico muito daora_
 
 ## Definição
 
-O markdown é considerado uma lfa(Linguagem formal autômata), que transforma o arquivo escrito, em html e javascript com ajuda de regex(outra lfa)
+Uma forma mais simples de escrever html e readme's
