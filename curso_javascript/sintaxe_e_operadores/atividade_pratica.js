@@ -39,4 +39,12 @@ const createSecondPhrase = (a,b) => {
     return `Sua soma é ${sum}, que é ${result10} que 10 e ${result20} que 20`;
 }
 
+function validaNumero(num){
+    if (!num) return 'Envie um número válido';
+  
+    return num;
+}
+
+console.log(validaNumero());
+
 console.log(mathTests(5, 5));
