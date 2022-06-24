@@ -1,0 +1,33 @@
+body{
+    background-color: rgb(169, 228, 248);
+}
+
+main{
+    position: absolute;
+    margin-left: 390px;
+    padding:30px;
+    background-color: rgb(149, 240, 137);
+    border: 2px solid rgb(35, 133, 28);
+    display: inline-block;
+    text-align: center;
+}
+button{
+    margin-top: 20px;
+    color: #888;
+    background-color: rgb(243, 129, 100);
+    border: 2px solid rgb(249, 87, 32);
+    border-radius: 5px;
+}
+button{
+    padding:10px;
+    margin-top: 20px;
+    color: #fff;
+    background-color: rgb(243, 129, 100);
+    border: 2px solid rgb(249, 87, 32);
+    border-radius: 5px;
+}
+button:hover{
+    cursor: pointer;
+    background-color: rgb(249, 87, 32);
+    color: #fff
+}
