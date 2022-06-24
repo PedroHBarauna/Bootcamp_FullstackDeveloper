@@ -1,27 +1,42 @@
 const mathTests = (a, b) =>{
-    if(a===b){
-        console.log ("Os números "+a+" "+b+" são iguais\n");
-    }
-    else{
-        return "Os números "+a+" "+b+" não são iguais\n"; 
-    }
-    if(a+b<10){
-        console.log("Sua soma é "+(a+b)+" que é menor que 10 e menor que 20");
-    }
-    else if(a+b>10 && a+b<20){
-        console.log("Sua soma é "+(a+b)+" que é maior que 10 e menor que 20");
-    }
-    else if(a+b==10){
-        console.log("Sua soma é "+(a+b)+" que é igual a 10 e menor que 20");
-    } 
-    else if(a+b==20){
-        console.log("Sua soma é "+(a+b)+" que é maior que 10 e igual a 20");
-    }
-    else{
-        console.log("Sua soma é "+(a+b)+" que é maior que 10 e maior que 20");
-    }
+    if(!a || !b) return 'Defina dois números!';
+
+    const firstPhrase = createFirstPhrase(a, b);
+    const secondPhrase = createSecondPhrase(a, b);
+
+    return `${firstPhrase} ${secondPhrase}`;
+
 }
 
-mathTests(1, 2);
-mathTests(10, 30);
-mathTests(10, 10);
+const createFirstPhrase = (a,b) => {
+
+    let notEqual = '';
+
+    if(a!==b){
+        notEqual = 'não'
+    }
+
+    return `Os Números ${a} e ${b} ${notEqual} são iguais.`
+}
+
+const createSecondPhrase = (a,b) => {
+    let sum = a+b; 
+
+    let result10 ='menor';
+    let result20 ='menor';
+    
+    const compare10 = sum>10;
+    const compare20 = sum>20;
+
+    if(compare10){
+        result10='maior';
+    }
+
+    if(compare20){
+        result20='maior';
+    }
+
+    return `Sua soma é ${sum}, que é ${result10} que 10 e ${result20} que 20`;
+}
+
+console.log(mathTests(5, 5));
