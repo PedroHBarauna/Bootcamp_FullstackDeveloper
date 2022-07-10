@@ -17,11 +17,11 @@ class Animal{
 }
 
 
-let a = new Animal('mamífero', 'onça');
-let b = new Animal('', 'onça');
+// let a = new Animal('mamífero', 'onça');
+// let b = new Animal('', 'onça');
 
-console.log(a.type, a.name);
-console.log(b.type, b.name);
+// console.log(a.type, a.name);
+// console.log(b.type, b.name);
 
 class Cat extends Animal{
     constructor(){
@@ -35,6 +35,7 @@ class Cat extends Animal{
 
 let c= new Cat();
 console.log(c.type);
+console.log(c.makesound());
 
 /* Outro Exemplo para get*/
 // class Boletim {
