@@ -11,14 +11,20 @@ const changeClasses = () => {
 }
 
 const changeText = () => {
-    if(button.classList[0] === "dark-mode"){
-        title.innerHTML = "Dark Mode ON";
+    const lightMode = "Light Mode";
+    const darkMode = "Dark Mode";
+
+    if(body.classList.contains(darkModeClass)){
+        button.innerHTML = lightMode;
+        title.innerHTML = darkMode + "ON";
+        return;
     }
-    else{
-        title.innerHTML = "Light Mode ON"
-    }
+
+    button.innerHTML = darkMode;
+    title.innerHTML = lightMode + "ON";
 }
 
+const darkModeClass = "dark-mode"
 const button = document.getElementById(`mode-selector`);
 const title = document.getElementById("page-title");
 const body = document.getElementsByTagName("body")[0];
